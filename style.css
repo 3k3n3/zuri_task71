@@ -1,0 +1,183 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/*ALL PAGES*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*navigatyion buttons*/
+nav{
+    margin: 25px 10px;
+    padding: 25px;
+    overflow: hidden;
+    text-align: right;
+}
+nav a{
+    color: gray;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+nav a:hover{
+    color: lightgrey;
+}
+nav a.inactive{
+    background-color: #7da7db;
+    color: white;
+  }
+
+/************************************************/
+
+/*INDEX PAGE*/
+body{
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+
+}
+
+h1{
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 260%;
+}
+
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    line-height: 180%;
+}
+
+.index_main{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.index_main div{
+    padding: 3.3em;
+    width: auto;
+}
+.index_main div h1, img{
+    padding-bottom: 25px;
+}
+div p{
+    font-size: medium;
+    padding-bottom: 100px;
+}
+input{
+    border-radius: 25px;
+    border: 1px solid;
+    padding: 15px 40px;
+}
+
+.sedan{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: hsl(31, 77%, 52%);
+}
+.sedan input{
+    color:hsl(31, 77%, 52%);
+}
+.sedan input:hover{
+    background-color: hsl(31, 77%, 52%);
+    color: white;
+    border: 1px solid white;
+}
+
+.suv{
+    background-color: hsl(184, 100%, 22%);
+}
+.suv input{
+    color: hsl(184, 100%, 22%);;
+}
+.suv input:hover{
+    background-color: hsl(184, 100%, 22%);
+    color: white;
+    border: 1px solid white;
+}
+
+.lux{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: hsl(179, 100%, 13%);
+}
+.lux input{
+    color: hsl(179, 100%, 13%);
+}
+.lux input:hover{
+    background-color: hsl(179, 100%, 13%);
+    color: white;
+    border: 1px solid white;
+}
+
+@media (max-width:375px) {
+    .index_main{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .sedan, .suv, .lux{
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+/************************************************/
+
+/*GRID PAGE*/
+.grid_body{
+    background-color: rgb(18, 18, 30);
+}
+.grid_main{
+    width: 35%;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+    'a a a a b b'
+    /*'a a a a b b' for some reason, this doesnt work*/
+    'c c c d d d'
+    'c c c e e e'
+    ;
+    gap: 0.8em;
+}
+
+.red{
+    padding: 6em 0;
+    background-color: orangered;
+    grid-area: a;
+}
+
+.yellow{
+    padding: 6em 0;
+    background-color: darkorange;
+    grid-area: b;
+}
+.green{
+    padding: 6em 0;
+    background-color: limegreen;
+    grid-area: c;
+}
+.blue1{
+    background-color: deepskyblue;
+    grid-area: d;
+}
+
+.blue2{
+    padding: 1em 0;
+    background-color: #00bfff;
+    grid-area: e;
+}
